@@ -46,12 +46,6 @@ jobs:
       - name: Build source code
         run: npm run build
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: nightly-build
-          path: build/libs/
-
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
